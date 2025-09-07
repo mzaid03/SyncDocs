@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realtime Collaboration</title>
+    <style>
+      /* existing styles */
+      body { margin: 0; font-family: system-ui, sans-serif; background: #0b1020; color: #e7e7ea; }
+      .topbar { display: flex; gap: 12px; align-items: center; padding: 12px 16px; border-bottom: 1px solid #253; background: #10172a; position: sticky; top: 0; }
+      .pill { padding: 4px 10px; border-radius: 999px; background: #1e293b; font-size: 12px; }
+      .container { max-width: 900px; margin: 0 auto; padding: 16px; }
+      .editor { background: #0f172a; border: 1px solid #1f2937; border-radius: 12px; padding: 16px; min-height: 420px; }
+      .avatars { display:flex; gap:6px; align-items:center; }
+      .avatar { width: 22px; height: 22px; border-radius: 50%; display:inline-block; }
+      a { color: #7dd3fc; }
+
+      /* 👇 add these new styles */
+      .toolbar { display:flex; gap:8px; align-items:center; margin:12px 0; flex-wrap:wrap; }
+      .btn { background:#1f2937; border:1px solid #2b3b4f; padding:6px 10px; border-radius:8px; cursor:pointer; }
+      .btn:hover { background:#243447; }
+      .btn-active { outline:2px solid #7dd3fc; }
+      .sep { width:1px; height:22px; background:#2b3b4f; margin:0 6px; }
+      .presence { display:flex; align-items:center; gap:6px; margin-top:10px; flex-wrap:wrap; }
+      .avatar { width:24px; height:24px; border-radius:50%; display:inline-grid; place-items:center; color:#0b1020; font-weight:700; font-size:12px; }
+      .pill.connected { background:#153e2a; }
+      .pill.connecting { background:#3a2e15; }
+      .pill.disconnected { background:#3d1b1b; }
+      .foot { opacity:.75; font-size:12px; margin-top:12px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
